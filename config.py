@@ -3,13 +3,13 @@ from os import environ, path as p
 # module vars
 _basedir = p.dirname(__file__)
 _parentdir = p.dirname(_basedir)
+_db_name = 'scraperwiki.sqlite'
 
 # configuration
 class Config(object):
-    db_name = 'scraperwiki.sqlite'
     DATA_URL = 'http://www.devinfo.org/libraries/ws/REST/1/en/JSON/ALL/MRD/ALL'
     DATA_LOCATION = 'Data.item.Observation.item'
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///%s' % p.join(_basedir, db_name)
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///%s' % p.join(_basedir, _db_name)
     DEBUG = False
     TESTING = False
     CHUNK_SIZE = 10000
@@ -17,7 +17,7 @@ class Config(object):
 
 
 class Scraper(Config):
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///%s' % p.join(_parentdir, db_name)
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///%s' % p.join(_parentdir, _db_name)
 
 
 class Production(Config):
