@@ -17,6 +17,7 @@ class Config(object):
 
 
 class Scraper(Config):
+    db_name = 'scraperwiki.sqlite'
     SQLALCHEMY_DATABASE_URI = 'sqlite:///%s' % p.join(_parentdir, db_name)
 
 
