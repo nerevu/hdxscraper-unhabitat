@@ -16,8 +16,12 @@ class Config(object):
     ROW_LIMIT = None
 
 
-class Production(Config):
+class Scraper(Config):
     SQLALCHEMY_DATABASE_URI = 'sqlite:///%s' % p.join(_parentdir, db_name)
+
+
+class Production(Config):
+    pass
 
 
 class Development(Config):
