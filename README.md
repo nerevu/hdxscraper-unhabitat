@@ -5,7 +5,14 @@ Collector for the [urbaninfo API](http://www.devinfo.org/urbaninfo/libraries/asp
 ## Setup
 
     pip install -r requirements.txt
+
+*local*
+
     manage setup
+
+*ScraperWiki Box*
+
+    manage -m Scraper setup
 
 ## Usage
 

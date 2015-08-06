@@ -76,7 +76,7 @@ def setup():
 
 @manager.command
 def run():
-    """Removes all content from database and creates new tables"""
+    """Populates db with most recent data"""
     limit = 0
 
     with app.app_context():
