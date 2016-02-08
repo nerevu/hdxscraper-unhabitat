@@ -36,13 +36,13 @@ def parse_requirements(filename, parent=None):
 sys.dont_write_bytecode = True
 
 config = {
-    'name': 'Collector Skeleton',
-    'description': 'a global asset allocation tool',
+    'name': 'hdxscraper-unhabitat',
+    'description': "Collector for UN Habitat's UrbanInfo API",
     'long_description': open('README.rst', 'rt').read(),
     'author': 'Reuben Cummings',
-    'url': 'https://github.com/reubano/collector',
+    'url': 'https://github.com/reubano/hdxscraper-unhabitat',
     'download_url':
-        'https://github.com/reubano/collector/downloads/collector*.tgz',
+        'https://github.com/reubano/hdxscraper-unhabitat/downloads/hdxscraper-unhabitat*.tgz',
     'author_email': 'reubano@gmail.com',
     'version': '0.14.0',
     'install_requires': parse_requirements('requirements.txt'),
